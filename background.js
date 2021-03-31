@@ -9,13 +9,13 @@ chrome.browserAction.onClicked.addListener(function () {
 
 function flatten(result, item) {
   var children = item.children;
-  for (var i = 0; i < children.length; i++) {
-    var current = children[i];
-    if (current.children) {
-      flatten(result, current);
-    } else if (current.url) {
-      result.push(current);
+  if (children) {
+    for (var i = 0; i < children.length; i++) {
+      var child = children[i];
+      flatten(result, child);
     }
+  } else {
+    result.push(item);
   }
 }
 
