@@ -1,10 +1,11 @@
 {
   "name": "Open Random Bookmarks",
   "description": "Open Random Bookmarks",
-  "version": "1.0",
+  "version": "1.0.1",
   "manifest_version": 2,
   "background": {
-    "page":"index.html"  
+    "page":"index.html",
+    "persistent": false
   },
   "browser_action": {
   },
